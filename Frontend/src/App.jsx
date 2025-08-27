@@ -7,6 +7,7 @@ import StudentProfile from '@/pages/StudentProfile';
 import Settings from '@/Pages/Settings';
 import NotFound from '@/pages/NotFound';
 import Layout from '@/Layouts/Layout';
+import Footer from './Components/Footer';
 
 export default function App() {
   const [dark, setDark] = useState(() =>
@@ -49,6 +50,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </>
   );
 }
