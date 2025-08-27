@@ -204,12 +204,12 @@ export default function Students() {
                     >
                       Edit
                     </button>
-                    {/* <button
+                    <button
                       onClick={() => handleSendEmail(s._id, s.name)}
                       className="text-green-600 hover:underline"
                     >
                       Send Email
-                    </button> */}
+                    </button>
                     <button
                       onClick={() => handleDelete(s._id)}
                       className="text-red-500 hover:underline"
