@@ -23,7 +23,7 @@ const sendReminderEmail = async (to, name) => {
       from: process.env.EMAIL_USER,
       to,
       subject: 'Time to Practice on Codeforces!',
-      text: `Hi ${name},\n\nWe noticed you haven't submitted anything on Coding platforms in the past week. Get back to solving problems and keep up the grind!\n\nBest Regards,\nMilestoneMe\n<---this is testing email from team MilestoneMe--->`
+      text: `Hi ${name},\n\nWe noticed you haven't submitted anything on Coding platforms in the past week. Get back to solving problems and keep up the grind!\n\nBest Regards,\nMilestoneMe`
     };
 
     const result = await transporter.sendMail(mailOptions);
