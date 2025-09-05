@@ -61,14 +61,14 @@ export default function StudentFormModal({ isOpen, onClose, onSuccess, student }
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">
-      <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-xl w-full max-w-md mx-auto">
+      <div className="bg-white dark:bg-black p-6 rounded-lg shadow-xl border border-gray-200 dark:border-green-800 w-full max-w-md mx-auto">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
             {student ? 'Edit Student' : 'Add New Student'}
           </h2>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-xl font-bold"
+            className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white text-xl font-bold transition-colors"
           >
             ×
           </button>
@@ -76,7 +76,7 @@ export default function StudentFormModal({ isOpen, onClose, onSuccess, student }
         
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-white mb-1">
               Full Name
             </label>
             <input
@@ -85,12 +85,12 @@ export default function StudentFormModal({ isOpen, onClose, onSuccess, student }
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full p-3 border border-gray-300 dark:border-green-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-green-500 focus:border-transparent"
             />
           </div>
           
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-white mb-1">
               Email Address
             </label>
             <input
@@ -100,12 +100,12 @@ export default function StudentFormModal({ isOpen, onClose, onSuccess, student }
               type="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full p-3 border border-gray-300 dark:border-green-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-green-500 focus:border-transparent"
             />
           </div>
           
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-white mb-1">
               Phone Number
             </label>
             <input
@@ -114,12 +114,12 @@ export default function StudentFormModal({ isOpen, onClose, onSuccess, student }
               required
               value={formData.phone}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full p-3 border border-gray-300 dark:border-green-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-green-500 focus:border-transparent"
             />
           </div>
           
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-white mb-1">
               Codeforces Handle
             </label>
             <input
@@ -128,7 +128,7 @@ export default function StudentFormModal({ isOpen, onClose, onSuccess, student }
               required
               value={formData.codeforcesHandle}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full p-3 border border-gray-300 dark:border-green-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-green-500 focus:border-transparent"
             />
           </div>
 
@@ -136,13 +136,13 @@ export default function StudentFormModal({ isOpen, onClose, onSuccess, student }
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 bg-gray-300 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-400 dark:hover:bg-gray-500 transition-colors"
+              className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="px-4 py-2 bg-blue-600 dark:bg-green-600 text-white rounded-md hover:bg-blue-700 dark:hover:bg-green-700 transition-colors focus:ring-2 focus:ring-blue-500 dark:focus:ring-green-500 focus:ring-offset-2"
             >
               {student ? 'Update Student' : 'Add Student'}
             </button>

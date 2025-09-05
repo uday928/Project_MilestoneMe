@@ -31,12 +31,12 @@ export default function App() {
           background: dark ? '#333' : '#ddd',
           color: dark ? '#fff' : '#000',
           border: 'none',
-          padding: '0.5rem 1rem',
+          // padding: '0.5rem 1rem',
           borderRadius: '5px',
           cursor: 'pointer',
         }}
       >
-        {dark ? 'Dark' : 'Light'}
+        {/* {dark ? 'Dark' : 'Light'} */}
       </button>
 
       <BrowserRouter>

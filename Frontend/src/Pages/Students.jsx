@@ -108,61 +108,61 @@ export default function Students() {
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-        <h1 className="text-3xl font-bold ">Student Activity</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Student Management</h1>
         <div className="flex flex-wrap gap-2">
           <input
             type="text"
             placeholder="Search by name..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="border border-gray-300 dark:border-gray-700 px-3 py-2 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-white"
+            className="border border-gray-300 dark:border-green-600 px-3 py-2 rounded-md bg-white dark:bg-black text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-green-500"
           />
           <button
             onClick={handleExportCSV}
-            className="flex items-center gap-1 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md shadow-sm"
+            className="flex items-center gap-1 bg-blue-600 hover:bg-blue-700 dark:bg-green-600 dark:hover:bg-green-700 text-white px-4 py-2 rounded-md shadow-sm transition-colors"
           >
             <Download size={16} /> Export CSV
           </button>
           <button
             onClick={openAddModal}
-            className="flex items-center gap-1 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md shadow-sm"
+            className="flex items-center gap-1 bg-blue-600 hover:bg-blue-700 dark:bg-green-600 dark:hover:bg-green-700 text-white px-4 py-2 rounded-md shadow-sm transition-colors"
           >
             <Plus size={16} /> Add Student
           </button>
         </div>
       </div>
 
-      <div className="overflow-x-auto shadow ring-1 ring-gray-200 dark:ring-gray-700 rounded-lg">
-        <table className="min-w-full table-auto divide-y divide-gray-200 dark:divide-gray-700">
-          <thead className="bg-gray-50 dark:bg-gray-800 text-sm font-semibold text-gray-700 dark:text-gray-200">
-            <tr>
-              <th className="px-4 py-3 text-left">Name</th>
-              <th className="px-4 py-3 text-left">Email</th>
-              <th className="px-4 py-3 text-left">Phone</th>
-              <th className="px-4 py-3 text-left">CF Handle</th>
-              <th className="px-4 py-3 text-left">Current</th>
-              <th className="px-4 py-3 text-left">Max</th>
-              <th className="px-4 py-3 text-left">Last Synced</th>
-              <th className="px-4 py-3 text-left">ReminderSent</th>
-              <th className="px-4 py-3 text-left">Turn on/off Reminder</th>
-              <th className="px-4 py-3 text-left">Actions</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200 dark:divide-gray-700 text-sm">
+      <div className="bg-white dark:bg-black shadow-lg rounded-lg border border-gray-200 dark:border-green-800 overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-gray-200 dark:divide-green-800">
+            <thead className="bg-gray-50 dark:bg-gray-900">
+              <tr>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 dark:text-white uppercase tracking-wider">Name</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 dark:text-white uppercase tracking-wider">Email</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 dark:text-white uppercase tracking-wider">Phone</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 dark:text-white uppercase tracking-wider">CF Handle</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 dark:text-white uppercase tracking-wider">Current</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 dark:text-white uppercase tracking-wider">Max</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 dark:text-white uppercase tracking-wider">Last Synced</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 dark:text-white uppercase tracking-wider">Reminders</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 dark:text-white uppercase tracking-wider">Email Alerts</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 dark:text-white uppercase tracking-wider">Actions</th>
+              </tr>
+            </thead>
+            <tbody className="bg-white dark:bg-black divide-y divide-gray-200 dark:divide-green-800">
             {filteredStudents.length > 0 ? (
               filteredStudents.map((s) => (
-                <tr key={s._id}>
-                  <td className="px-4 py-2">{s.name}</td>
-                  <td className="px-4 py-2">{s.email}</td>
-                  <td className="px-4 py-2">{s.phone}</td>
-                  <td className="px-4 py-2 text-blue-600 dark:text-blue-400">
+                <tr key={s._id} className="hover:bg-gray-50 dark:hover:bg-gray-900">
+                  <td className="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">{s.name}</td>
+                  <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-600 dark:text-gray-300">{s.email}</td>
+                  <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-600 dark:text-gray-300">{s.phone}</td>
+                  <td className="px-4 py-3 whitespace-nowrap text-sm text-blue-600 dark:text-green-400 font-mono">
                     {s.codeforcesHandle}
                   </td>
-                  <td className="px-4 py-2">{s.currentRating ?? "—"}</td>
+                  <td className="px-4 py-3 whitespace-nowrap text-sm font-semibold text-blue-600 dark:text-green-400">{s.currentRating ?? "—"}</td>
+                  <td className="px-4 py-3 whitespace-nowrap text-sm font-semibold text-blue-600 dark:text-green-400">{s.maxRating ?? "—"}</td>
 
-                  <td className="px-4 py-2">{s.maxRating ?? "—"}</td>
-
-                  <td className="px-4 py-2">
+                  <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-600 dark:text-gray-300">
                     {s.lastSynced
                       ? new Date(s.lastSynced).toLocaleString("en-IN", {
                           day: "2-digit",
@@ -174,63 +174,69 @@ export default function Students() {
                         })
                       : "—"}
                   </td>
-                  <td className="px-4 py-2">{s.remindersSent ?? "—"}</td>
-
-                  <td className="px-4 py-2">
+                  <td className="px-4 py-3 whitespace-nowrap text-sm text-center">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-green-900 dark:text-green-200">
+                      {s.remindersSent ?? 0}
+                    </span>
+                  </td>
+                  <td className="px-4 py-3 whitespace-nowrap text-sm text-center">
                     <button
                       onClick={() =>
                         handleToggleReminder(s._id, s.emailRemindersEnabled)
                       }
-                      className={`cursor-pointer px-3 py-1 rounded-full text-white text-sm transition-colors duration-200 ${
+                      className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 ${
                         s.emailRemindersEnabled
-                          ? "bg-green-500 hover:bg-green-600"
-                          : "bg-gray-400 hover:bg-gray-500"
+                          ? "bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-green-800 dark:text-green-100 dark:hover:bg-green-700"
+                          : "bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
                       }`}
                     >
-                      {s.emailRemindersEnabled ? "On" : "Off"}
+                      {s.emailRemindersEnabled ? "Enabled" : "Disabled"}
                     </button>
                   </td>
 
-                  <td className="px-4 py-2 space-x-2">
-                    <Link
-                      to={`/students/${s._id}`}
-                      className="text-blue-600 hover:underline"
-                    >
-                      View
-                    </Link>
-                    <button
-                      onClick={() => openEditModal(s)}
-                      className="text-yellow-500 hover:underline"
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={() => handleSendEmail(s._id, s.name)}
-                      className="text-green-600 hover:underline"
-                    >
-                      Send Email
-                    </button>
-                    <button
-                      onClick={() => handleDelete(s._id)}
-                      className="text-red-500 hover:underline"
-                    >
-                      Delete
-                    </button>
+                  <td className="px-4 py-3 whitespace-nowrap text-sm">
+                    <div className="flex flex-wrap gap-1">
+                      <Link
+                        to={`/students/${s._id}`}
+                        className="inline-block px-2 py-1 text-xs bg-blue-100 text-blue-700 dark:bg-green-900 dark:text-green-200 rounded hover:bg-blue-200 dark:hover:bg-green-800 transition-colors"
+                      >
+                        View
+                      </Link>
+                      <button
+                        onClick={() => openEditModal(s)}
+                        className="px-2 py-1 text-xs bg-blue-100 text-blue-700 dark:bg-green-900 dark:text-green-200 rounded hover:bg-blue-200 dark:hover:bg-green-800 transition-colors"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => handleSendEmail(s._id, s.name)}
+                        className="px-2 py-1 text-xs bg-blue-100 text-blue-700 dark:bg-green-900 dark:text-green-200 rounded hover:bg-blue-200 dark:hover:bg-green-800 transition-colors"
+                      >
+                        Email
+                      </button>
+                      <button
+                        onClick={() => handleDelete(s._id)}
+                        className="px-2 py-1 text-xs bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-200 rounded hover:bg-red-200 dark:hover:bg-red-800 transition-colors"
+                      >
+                        Delete
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))
             ) : (
               <tr>
                 <td
-                  colSpan="7"
-                  className="text-center py-10 text-gray-500 dark:text-gray-400"
+                  colSpan="10"
+                  className="text-center py-10 text-gray-600 dark:text-gray-300"
                 >
                   No students found.
                 </td>
               </tr>
             )}
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <StudentFormModal

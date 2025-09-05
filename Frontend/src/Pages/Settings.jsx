@@ -57,55 +57,57 @@ export default function Settings() {
   };
 
   return (
-    <div className="space-y-6 p-6">
-      <h1 className="text-2xl font-bold">Sync Configuration</h1>
+    <div className="space-y-6">
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Sync Configuration</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* Frequency */}
-        <div>
-          <label className="block mb-1">Frequency</label>
-          <select
-            name="frequency"
-            value={config.frequency}
-            onChange={handleChange}
-            className="w-full border px-3 py-2 rounded-md dark:bg-gray-800 dark:text-white"
-          >
-            <option value="hourly">Hourly</option>
-            <option value="daily">Daily</option>
-            <option value="weekly">Weekly</option>
-          </select>
+      <div className="bg-white dark:bg-black p-6 rounded-lg shadow-lg border border-gray-200 dark:border-green-800">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Frequency */}
+          <div>
+            <label className="block mb-2 text-sm font-medium text-gray-700 dark:text-white">Frequency</label>
+            <select
+              name="frequency"
+              value={config.frequency}
+              onChange={handleChange}
+              className="w-full border border-gray-300 dark:border-green-600 px-3 py-2 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-green-500"
+            >
+              <option value="hourly">Hourly</option>
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+            </select>
+          </div>
+
+          {/* Time */}
+          <div>
+            <label className="block mb-2 text-sm font-medium text-gray-700 dark:text-white">Time (HH:MM)</label>
+            <input
+              name="time"
+              type="time"
+              value={config.time}
+              onChange={handleChange}
+              className="w-full border border-gray-300 dark:border-green-600 px-3 py-2 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-green-500"
+            />
+          </div>
+
+          {/* Timezone */}
+          <div>
+            <label className="block mb-2 text-sm font-medium text-gray-700 dark:text-white">Timezone</label>
+            <input
+              name="timezone"
+              value={config.timezone}
+              onChange={handleChange}
+              className="w-full border border-gray-300 dark:border-green-600 px-3 py-2 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-green-500"
+            />
+          </div>
         </div>
 
-        {/* Time */}
-        <div>
-          <label className="block mb-1 ">Time (HH:MM)</label>
-          <input
-            name="time"
-            type="time"
-            value={config.time}
-            onChange={handleChange}
-            className="w-full border px-3 py-2 rounded-md dark:bg-gray-800 dark:text-white"
-          />
-        </div>
-
-        {/* Timezone */}
-        <div>
-          <label className="block mb-1">Timezone</label>
-          <input
-            name="timezone"
-            value={config.timezone}
-            onChange={handleChange}
-            className="w-full border px-3 py-2 rounded-md dark:bg-gray-800 dark:text-white"
-          />
-        </div>
+        <button
+          onClick={handleSave}
+          className="mt-6 bg-blue-600 dark:bg-green-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 dark:hover:bg-green-700 transition-colors focus:ring-2 focus:ring-blue-500 dark:focus:ring-green-500"
+        >
+          Save Settings
+        </button>
       </div>
-
-      <button
-        onClick={handleSave}
-        className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
-      >
-        Save Settings
-      </button>
     </div>
   );
 }

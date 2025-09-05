@@ -4,13 +4,13 @@ import { BarChart3, Users, Settings } from 'lucide-react';
 
 export default function Sidebar() {
   const linkClass = ({ isActive }) =>
-    `flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 ${
-      isActive ? 'bg-gray-200 dark:bg-gray-700 font-semibold' : 'text-gray-600 dark:text-gray-300'
+    `flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-blue-50 dark:hover:bg-green-900 transition-colors ${
+      isActive ? 'bg-blue-100 dark:bg-green-800 text-blue-700 dark:text-green-100 font-semibold' : 'text-gray-700 dark:text-white'
     }`;
 
   return (
-    <aside className="w-64 bg-white dark:bg-gray-900 border-r dark:border-gray-700 p-4 space-y-4">
-      <h1 className="text-xl font-bold text-center text-gray-800 dark:text-gray-100">MilestoneMe</h1>
+    <aside className="w-64 bg-white dark:bg-black border-r border-gray-200 dark:border-green-800 p-4 space-y-4">
+      <h1 className="text-xl font-bold text-center text-gray-900 dark:text-white">MilestoneMe</h1>
 
       <nav className="flex flex-col space-y-2">
         <NavLink to="/" className={linkClass}>

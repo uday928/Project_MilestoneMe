@@ -21,7 +21,7 @@ const Footer = () => {
             <span className="text-xs uppercase tracking-wider text-gray-500">
               Powered by
             </span>
-            <img src="./public/logo.png" alt="" className="h-15 w-60" />
+            <img src="../public/logo.png" alt="logo" className="h-15 w-60" />
           </div>
         </div>
 
