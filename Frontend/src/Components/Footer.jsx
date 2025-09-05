@@ -2,10 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-black text-gray-300">
-      <div className="absolute inset-0 bg-gradient-to-tr from-gray-900 via-black to-gray-900 opacity-80"></div>
+    <footer className="relative bg-black text-gray-300 ">
+      <div className="absolute inset-0 bg-gradient-to-tr  from-gray-900 via-black to-gray-900 opacity-80"></div>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="relative max-w-7xl mx-auto  px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left Section */}
         <div>
           <h2 className="text-2xl font-bold text-white tracking-wide mb-4">

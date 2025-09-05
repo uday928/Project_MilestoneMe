@@ -84,13 +84,13 @@ export default function StudentProfile() {
 
   return (
     <div className="space-y-6">
-      <Link to="/students" className="inline-flex items-center text-blue-600">
+      <Link to="/students" className="inline-flex items-center text-blue-300 hover:underline">
         <ArrowLeft size={16} className="mr-1" /> Back to Students
       </Link>
 
       <header className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">{student.name}</h1>
-        <div className="text-sm text-gray-600">
+        <h1 className="text-3xl text-gray-300 font-bold">{student.name}</h1>
+        <div className="text-sm text-gray-400 border p-1">
           Last Synced: {new Date(student.lastSynced).toLocaleString()}
         </div>
       </header>
@@ -107,7 +107,7 @@ export default function StudentProfile() {
           }}
           className="p-3 rounded-lg border border-gray-300 dark:border-gray-600 
              bg-white dark:bg-gray-800 text-gray-900 dark:text-white
-             focus:ring-2 focus:ring-orange-500 focus:border-orange-500
+             focus:ring-2 focus:ring-green-500 focus:border-green-500
              appearance-none transition-all duration-200"
         >
           <option value={30}>Last 30 days</option>
@@ -121,7 +121,7 @@ export default function StudentProfile() {
               <XAxis dataKey="date" />
               <YAxis />
               <Tooltip />
-              <Line type="monotone" dataKey="rating" stroke="#8884d8" />
+              <Line type="monotone" dataKey="rating" stroke="#27C461" />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -174,7 +174,7 @@ export default function StudentProfile() {
           }}
           className="p-3 rounded-lg border border-gray-300 dark:border-gray-600 
              bg-white dark:bg-gray-800 text-gray-900 dark:text-white
-             focus:ring-2 focus:ring-orange-500 focus:border-orange-500
+             focus:ring-2 focus:ring-green-500 focus:border-green-500
              appearance-none transition-all duration-200"
         >
           <option value={7}>Last 7 days</option>
@@ -208,7 +208,7 @@ export default function StudentProfile() {
               <XAxis dataKey="bucket" />
               <YAxis />
               <Tooltip />
-              <Bar dataKey="count" fill="#8884d8" />
+              <Bar dataKey="count" fill="#23AF56" />
             </BarChart>
           </ResponsiveContainer>
         </div>

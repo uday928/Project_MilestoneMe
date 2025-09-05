@@ -90,8 +90,7 @@ export default function Dashboard() {
               />
               <Bar
                 dataKey="count"
-                fill="#3B82F6"
-                className="dark:fill-green-500"
+                fill="#23AF56"
               />
             </BarChart>
           </ResponsiveContainer>
@@ -119,15 +118,17 @@ export default function Dashboard() {
                   borderRadius: "8px",
                 }}
               />
+              
               <Line
                 type="monotone"
                 dataKey="count"
-                stroke="#3B82F6"
+                stroke="#23AF56"
                 strokeWidth={3}
-                dot={{ fill: "#3B82F6", strokeWidth: 2, r: 4 }}
-                className="dark:stroke-green-500 dark:dot-fill-green-500"
+                dot={{ fill: "#0C3C1D", strokeWidth: 2, r: 4 }}
+               
               />
             </LineChart>
+            
           </ResponsiveContainer>
         </div>
       </div>
