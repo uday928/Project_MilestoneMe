@@ -25,3 +25,17 @@ Follow these steps to run the project locally:
 ```bash
 git clone https://github.com/uday928/Project_MilestoneMe.git
 cd Project_MilestoneMe
+```
+
+### 2. Install Dependencies
+```bash 
+    npm install
+```
+
+### 3. Run the project:
+```bash 
+    --> Run development server:
+    npm start
+    --> Run frontend
+    npm run dev
+```
