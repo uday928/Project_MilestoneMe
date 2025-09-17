@@ -2,19 +2,15 @@
 
 ## Project Overview
 **MilestoneMe** is a platform designed to **bridge the gap between students and faculty in the coding journey**.  
-The idea is to help students track their learning progress, showcase milestones, and get guided support from faculty through an organized dashboard.  
-
-With MilestoneMe, students can:
-- Log and track coding milestones across different platforms.
-- Get personalized suggestions to improve their skills.
-- Collaborate and share progress with faculty/mentors.
-- Stay consistent and motivated in their coding journey.
+The idea is to help faculty to track their students' learning progress, showcase milestones, and give guided support to students through an organized dashboard.  
 
 Faculty can:
 - Monitor student progress effectively.
 - Provide timely feedback and resources.
 - Identify strengths and weaknesses at a glance.
-
+- see multiple visuals for particular student regarding his/her journey
+- send automate/manual notifications to motivate students to actively perform
+- detect inactive students
 ---
 
 ## Setup Instructions
