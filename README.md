@@ -40,3 +40,14 @@ cd Project_MilestoneMe
     npm run dev
 ```
 
+## Screenshots
+
+### 🔹 Homepage
+![Homepage](./screenshots/homepage.png)
+
+### 🔹 Student Dashboard
+![Student Dashboard](./screenshots/studentsPage.png)
+
+### 🔹 Faculty Dashboard
+![Faculty Dashboard](./screenshots/studentProfile.png)
+
