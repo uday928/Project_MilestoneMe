@@ -10,7 +10,7 @@ export default function Sidebar() {
 
   return (
     <aside className="w-64 bg-white dark:bg-black border-r border-gray-200 dark:border-green-800 p-4 space-y-4">
-      <img src='./public/MM_Logo.png' />
+      <img src='./MM_Logo.png' />
 
       <nav className="flex flex-col space-y-2">
         <NavLink to="/" className={linkClass}>
