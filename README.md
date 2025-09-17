@@ -43,11 +43,22 @@ cd Project_MilestoneMe
 ## Screenshots
 
 ### 🔹 Homepage
-![Homepage](./screenshots/homepage.png)
+![Homepage](./screenshots/homePage.png)
 
-### 🔹 Student Dashboard
-![Student Dashboard](./screenshots/studentsPage.png)
+### 🔹 Students Section
+![Students Section](./screenshots/studentsPage.png)
 
-### 🔹 Faculty Dashboard
-![Faculty Dashboard](./screenshots/studentProfile.png)
+### 🔹 Student Profile
+![Student Profile](./screenshots/studentProfile.png)
 
+### 🔹 Settings
+![Settings](./screenshots/settings.png)
+
+### 🔹 mail function
+![mail function](./screenshots/mail.png)
+
+### 🔹 CSV file
+![CSV file](./screenshots/csv.png)
+
+### 🔹 Syncing process
+![sync](./screenshots/cronjob.png)
